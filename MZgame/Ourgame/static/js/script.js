@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const heartImageUrl = container.getAttribute('data-heart-url');
     const healthImages = JSON.parse(container.getAttribute('data-health-images'));
     const ayoung = document.getElementById('ayoung');
+    const collisionSound = document.getElementById('collision-sound');
 
     let topPosition = 50; // Starting at 50% from the top
     let hp = 100;
@@ -84,6 +85,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (isHeart) {
                     hp = Math.min(100, hp + 20);
                     updateHpBar();
+                } else {
+                    collisionSound.currentTime = 0; // Reset sound to start
+                    collisionSound.play(); // Play collision sound when an object hits the hand
                 }
             } else if (objectRect.left >= window.innerWidth) {
                 // Check if the object is off the right edge

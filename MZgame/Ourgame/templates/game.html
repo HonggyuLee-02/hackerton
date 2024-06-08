@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="{% static 'css/game.css' %}" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            // Django 템플릿 태그를 사용하여 URL과 CSRF 토큰을 설정합니다.
             var saveScoreUrl = "{% url 'save_score' %}";
             var gameoverUrl = "{% url 'gameover' %}";
             var csrfToken = '{{ csrf_token }}';
@@ -28,6 +27,7 @@
             <img id="hand" src="{% static 'images/hand.jpg' %}" alt="Hand" />
             <img id="ayoung" src="{% static 'images/ayoung1.png' %}" alt="Ayoung" />
         </div>
+        <audio id="collision-sound" src="{% static 'audio/collision.mp3' %}" preload="auto"></audio>
         <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>
