@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Block the Objects</title>
+        <link rel="stylesheet" href="{% static 'css/game.css' %}" />
+    </head>
+    <body>
+        <div
+            id="container"
+            data-heart-url="{% static 'images/heart.png' %}"
+            data-health-images='["{% static "images/ayoung1.png" %}", "{% static "images/ayoung2.png" %}", "{% static "images/ayoung3.png" %}", "{% static "images/ayoung4.png" %}", "{% static "images/ayoung5.png" %}", "{% static "images/ayoung6.png" %}", "{% static "images/ayoung7.png" %}"]'
+        >
+            <div id="hp-container">
+                <div id="hp-bar"></div>
+            </div>
+            <div id="timer">Time: 0s</div>
+            <img id="hand" src="{% static 'images/hand.jpg' %}" alt="Hand" />
+            <img id="ayoung" src="{% static 'images/ayoung1.png' %}" alt="ayoung" />
+        </div>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>

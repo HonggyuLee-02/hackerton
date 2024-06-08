@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>맑눈광게임</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'home.css' %}" />
+    </head>
+    <body>
+        <div class="container">
+            <img src="{% static 'images/startpicture.png' %}" alt="Game Image" />
+            <h5 class="ment">저는 에어팟을 끼고 일해야 능률이 올라가는 편입니다.</h5>
+            <button onclick="location.href='{% url 'name' %}'">게임하러가기</button>
+        </div>
+    </body>
+</html>
